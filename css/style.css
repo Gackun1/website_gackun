@@ -53,6 +53,7 @@ h4 {
   position: relative;
   display: grid;
   grid-template-columns: 150px 1fr;
+  min-width: 1000px;
 }
 
 .l-site__header {
