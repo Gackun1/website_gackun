@@ -261,6 +261,81 @@ h4 {
   color: #333;
 }
 
+.c-works-popup {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: #00000099;
+}
+
+.c-works-popup.js-popup-show {
+  display: block;
+}
+
+.c-works-popup__inner {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+.c-works-popup__inner img {
+  width: 100%;
+}
+
+.c-works-popup__inner::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.c-works-popup__inner::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+.c-works-popup__inner::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 5px;
+}
+
+.c-works-popup__close {
+  position: fixed;
+  z-index: 1;
+  right: 10%;
+  top: 10%;
+  transform: translate(70%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 10rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.c-works-popup__close:before, .c-works-popup__close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 4px;
+  background: #333;
+}
+
+.c-works-popup__close:before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.c-works-popup__close:after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 .c-blog {
   display: grid;
   grid-gap: 30px;

@@ -105,45 +105,75 @@
             <div class="c-section__description">私の制作実績です。<br />全て見るには<a href="#">一覧ページ</a>にアクセスしてください！</div>
           </section>
           <div class="c-works">
-            <article class="c-works__item js-reveal">
-              <a href="#">
+            <article class="c-works__item js-reveal js-popup-button">
+              <a>
                 <img src="./img/works01.jpg" alt="" class="c-works__img" />
                 <span class="c-works__cat">web site</span>
                 <h3 class="c-works__heading">Labe</h3>
               </a>
             </article>
-            <article class="c-works__item js-reveal">
-              <a href="#">
+            <article class="c-works__item js-reveal js-popup-button">
+              <a>
                 <img src="./img/works02.jpg" alt="" class="c-works__img" />
                 <span class="c-works__cat">web site</span>
                 <h3 class="c-works__heading">HAL幼稚園</h3>
               </a>
             </article>
-            <article class="c-works__item js-reveal">
-              <a href="#">
+            <article class="c-works__item js-reveal js-popup-button">
+              <a>
                 <img src="./img/works03.jpg" alt="" class="c-works__img" />
                 <span class="c-works__cat">web site</span>
                 <h3 class="c-works__heading">越後妻有</h3>
               </a>
             </article>
-            <article class="c-works__item js-reveal">
-              <a href="#">
+            <article class="c-works__item js-reveal js-popup-button">
+              <a>
                 <img src="./img/works04.png" alt="" class="c-works__img" />
                 <span class="c-works__cat">web site</span>
                 <h3 class="c-works__heading">Studio Zero</h3>
               </a>
             </article>
-            <article class="c-works__item js-reveal">
-              <a href="#">
+            <article class="c-works__item js-reveal js-popup-button">
+              <a>
                 <img src="./img/works05.png" alt="" class="c-works__img" />
                 <span class="c-works__cat">web app</span>
                 <h3 class="c-works__heading">Group Work</h3>
               </a>
             </article>
           </div>
+          <div class="c-works-popup js-popup-item">
+            <div class="c-works-popup__close"></div>
+            <div class="c-works-popup__inner">
+              <img src="./img/works01_full.png" alt="" />
+            </div>
+          </div>
+          <div class="c-works-popup js-popup-item">
+            <div class="c-works-popup__close"></div>
+            <div class="c-works-popup__inner">
+              <img src="./img/works02_full.png" alt="" />
+            </div>
+          </div>
+          <div class="c-works-popup js-popup-item">
+            <div class="c-works-popup__close"></div>
+            <div class="c-works-popup__inner">
+              <img src="./img/works03_full.png" alt="" />
+            </div>
+          </div>
+          <div class="c-works-popup js-popup-item">
+            <div class="c-works-popup__close"></div>
+            <div class="c-works-popup__inner">
+              <img src="./img/works04_full.png" alt="" />
+            </div>
+          </div>
+          <div class="c-works-popup js-popup-item">
+            <div class="c-works-popup__close"></div>
+            <div class="c-works-popup__inner">
+              <img src="./img/works05_full.png" alt="" />
+            </div>
+          </div>
           <a href="#" class="c-code-button u-mb-100 js-reveal">
             <span class="c-code-button__head">&lt;a href="/<span class="c-code-button__hov-effect">works</span>/"&gt;</span>
-            <p class="c-code-button__body">view more</p>
+            <p class="c-code-button__body">もっと見る</p>
             <span class="c-code-button__foot">&lt;/a&gt;</span>
           </a>
           <section id="blog" class="c-section">
@@ -207,7 +237,7 @@
             </div>
             <a href="#" class="c-code-button">
               <span class="c-code-button__head">&lt;a href="/<span class="c-code-button__hov-effect">blog</span>/"&gt;</span>
-              <p class="c-code-button__body">view more</p>
+              <p class="c-code-button__body">もっと見る</p>
               <span class="c-code-button__foot">&lt;/a&gt;</span>
             </a>
           </section>
@@ -352,6 +382,20 @@
             });
           });
         }
+
+        // popup
+        const popupTriggerElements = document.querySelectorAll(".js-popup-button");
+        const popupTargetElements = document.querySelectorAll(".js-popup-item");
+        popupTriggerElements.forEach((elm, i) => {
+          elm.addEventListener("click", () => {
+            popupTargetElements[i].classList.toggle("js-popup-show");
+          });
+        });
+        popupTargetElements.forEach((elm, i) => {
+          elm.addEventListener("click", () => {
+            popupTargetElements[i].classList.toggle("js-popup-show");
+          });
+        });
       });
     </script>
   </body>
